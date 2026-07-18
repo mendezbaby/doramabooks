@@ -1,0 +1,9 @@
+# Arquivos que NAO devem subir para a Vercel
+# (server.py contem a API key - ele so roda localmente!)
+server.py
+render.yaml
+INICIAR SITE.bat
+api
+.venv
+__pycache__
+*.pyc

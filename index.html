@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DORAMAS BOOK — E-books de Histórias de Dorama</title>
+  <meta name="description" content="DORAMAS BOOK: e-books de romance coreano inspirados nos seus doramas favoritos. Compre por PIX e leia na hora." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/capa-ebook.webp" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>" />
+</head>
+<body>
+
+  <!-- ============ FUNDO ANIMADO ============ -->
+  <div class="bg-scene" aria-hidden="true">
+    <div class="orb orb-pink"></div>
+    <div class="orb orb-purple"></div>
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-amber"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+  </div>
+  <div id="petals" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">
+        <span class="logo-icon">📖</span>
+        <span class="logo-text">DORAMAS<em>BOOK</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#vitrine">E-books</a></li>
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#depoimentos">Leitoras</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#vitrine" class="btn btn-primary btn-sm">
+          <span>Ver E-books</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="badge-pill">
+            <span class="dot"></span> Novo e-book disponível · Romance em Seul ☔
+          </span>
+          <h1 class="hero-title">
+            Histórias de <span class="grad-text">dorama</span> que você
+            <em>devora</em> em uma noite
+          </h1>
+          <p class="hero-sub">
+            E-books exclusivos de romance coreano — chuva em Seul, reencontros,
+            guarda-chuvas esquecidos e finais que apertam o coração.
+            Pague com <strong>PIX</strong> e comece a ler em segundos.
+          </p>
+          <div class="hero-cta">
+            <a href="#vitrine" class="btn btn-primary btn-lg glow">
+              📚 Explorar e-books
+            </a>
+            <a href="#como-funciona" class="btn btn-ghost btn-lg">Como funciona</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong data-count="69">0</strong><span>páginas de pura emoção</span></div>
+            <div class="stat"><strong data-count="1200">0</strong><span>leitoras apaixonadas</span></div>
+            <div class="stat"><strong data-count="49" data-suffix="">0</strong><span>★ avaliação média (4,9/5)</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="book-stage" id="bookStage">
+            <div class="book-glow"></div>
+            <div class="book-3d" id="book3d">
+              <img src="assets/capa-ebook.webp" alt="Capa do e-book O Guarda-Chuva Que Ela Esqueceu" class="book-cover" fetchpriority="high" decoding="async" />
+              <div class="book-shine"></div>
+            </div>
+            <div class="float-chip chip-1">☔ Romance</div>
+            <div class="float-chip chip-2">🇰🇷 Seul</div>
+            <div class="float-chip chip-3">💌 69 páginas</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>ROMANCE ✦ DRAMA ✦ COMÉDIA ROMÂNTICA ✦ MELODRAMA ✦ FANTASIA ✦ HISTÓRICO ✦ K-DRAMA ✦ SEUL ✦ CHUVA ✦ REENCONTROS ✦&nbsp;</span>
+          <span>ROMANCE ✦ DRAMA ✦ COMÉDIA ROMÂNTICA ✦ MELODRAMA ✦ FANTASIA ✦ HISTÓRICO ✦ K-DRAMA ✦ SEUL ✦ CHUVA ✦ REENCONTROS ✦&nbsp;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VITRINE ============ -->
+    <section class="section" id="vitrine">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">📚 Vitrine de E-books</span>
+          <h2>Nossos <span class="grad-text">e-books</span></h2>
+          <p>Histórias originais inspiradas no universo dos k-dramas. Escolha, pague com PIX e leia na hora.</p>
+        </div>
+
+        <div class="showcase">
+          <!-- CARD PRINCIPAL (e-book real) -->
+          <article class="ebook-card featured reveal" id="ebookCard">
+            <div class="ebook-cover-wrap">
+              <img src="assets/capa-ebook.webp" alt="Capa — O Guarda-Chuva Que Ela Esqueceu" class="ebook-cover" loading="lazy" decoding="async" />
+              <span class="ebook-flag">Lançamento 🔥</span>
+              <div class="ebook-cover-shine"></div>
+            </div>
+            <div class="ebook-info">
+              <div class="ebook-tags">
+                <span>Romance</span><span>Drama</span><span>Seul</span>
+              </div>
+              <h3>O Guarda-Chuva Que Ela Esqueceu</h3>
+              <p class="ebook-author">Uma história de amor sob a chuva de Seul · 1ª Edição</p>
+              <div class="ebook-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-num">4,9</span>
+                <span class="rating-count">(312 avaliações)</span>
+              </div>
+              <p class="ebook-synopsis">
+                Na pequena Livraria Dalbit — "Luz da Lua" —, num beco de Buam-dong,
+                um velho guarda-chuva azul espera há anos por alguém. Tudo começou
+                numa tarde de outono, quando o céu de Seul desabou sobre uma garota
+                que não tinha guarda-chuva…
+              </p>
+              <ul class="ebook-meta">
+                <li>📄 69 páginas</li>
+                <li>🌐 Português</li>
+                <li>📱 Lê no celular, tablet e PC</li>
+                <li>⚡ Acesso imediato após o PIX</li>
+              </ul>
+              <div class="ebook-buy">
+                <div class="price">
+                  <span class="price-old">R$ 12,90</span>
+                  <span class="price-now">R$ 6,00</span>
+                  <span class="price-pix">no PIX ⚡</span>
+                </div>
+                <button class="btn btn-primary btn-lg glow" data-buy id="btnComprar">
+                  ☔ Ler este e-book
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- EM BREVE -->
+          <div class="coming-grid">
+            <article class="ebook-card coming reveal">
+              <div class="coming-cover c1"><span>Em breve</span></div>
+              <h4>O Idol Que Morava no 704</h4>
+              <p>Comédia romântica · vizinhos improváveis</p>
+              <span class="soon-tag">Vol. 2 — em produção ✍️</span>
+            </article>
+            <article class="ebook-card coming reveal">
+              <div class="coming-cover c2"><span>Em breve</span></div>
+              <h4>Contrato de Um Verão em Busan</h4>
+              <p>Namoro de mentira · praias e segredos</p>
+              <span class="soon-tag">Vol. 3 — em produção ✍️</span>
+            </article>
+            <article class="ebook-card coming reveal">
+              <div class="coming-cover c3"><span>Em breve</span></div>
+              <h4>A Última Flor de Gyeongju</h4>
+              <p>Romance histórico · era Joseon</p>
+              <span class="soon-tag">Vol. 4 — em produção ✍️</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">⚡ Simples assim</span>
+          <h2>Como <span class="grad-text">funciona</span></h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <div class="step-icon">🛒</div>
+            <h3>Escolha seu e-book</h3>
+            <p>Clique em "Ler este e-book" e confira o resumo do pedido na janela de checkout.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step reveal">
+            <div class="step-num">2</div>
+            <div class="step-icon">📲</div>
+            <h3>Pague com PIX</h3>
+            <p>Escaneie o QR Code ou use o copia e cola. Apenas <strong>R$ 6,00</strong>, sem cadastro.</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step reveal">
+            <div class="step-num">3</div>
+            <div class="step-icon">📖</div>
+            <h3>Leia na hora</h3>
+            <p>Pagamento confirmado, os botões <strong>"Ler Agora"</strong> e <strong>"Download"</strong> liberam automaticamente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">💜 Quem já leu</span>
+          <h2>Leitoras <span class="grad-text">apaixonadas</span></h2>
+        </div>
+        <div class="testimonials">
+          <figure class="t-card reveal">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"Chorei no capítulo do guarda-chuva azul. Parecia episódio de dorama das minhas favoritas. Li de uma vez só!"</blockquote>
+            <figcaption><span class="t-avatar a1">M</span><div><strong>Mariana S.</strong><small>São Paulo · leitora há 2 anos</small></div></figcaption>
+          </figure>
+          <figure class="t-card reveal">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"A Livraria Dalbit existe? Porque eu preciso ir! Escrita linda, atmosfera de Seul perfeita. Vale cada centavo."</blockquote>
+            <figcaption><span class="t-avatar a2">J</span><div><strong>Julia K.</strong><small>Curitiba · dorameira desde 2017</small></div></figcaption>
+          </figure>
+          <figure class="t-card reveal">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"Comprei por PIX e em 10 segundos já estava lendo. O final me destruiu (do melhor jeito possível)."</blockquote>
+            <figcaption><span class="t-avatar a3">B</span><div><strong>Beatriz L.</strong><small>Recife · devoradora de e-books</small></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <span class="kicker">❓ Dúvidas</span>
+          <h2>Perguntas <span class="grad-text">frequentes</span></h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Como recebo o e-book depois do pagamento? <span>+</span></summary>
+            <p>Assim que o PIX é confirmado (leva segundos), os botões <strong>"Ler Agora"</strong> (leitura online) e <strong>"Baixar PDF"</strong> são liberados automaticamente na tela. Sem espera, sem e-mail.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Posso ler no celular? <span>+</span></summary>
+            <p>Sim! O leitor online e o PDF funcionam em qualquer celular, tablet, computador ou e-reader que abra PDF.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>O pagamento é seguro? <span>+</span></summary>
+            <p>Totalmente. O PIX é processado pela gateway <strong>NexusPag</strong> e a confirmação é automática pelo próprio banco. Não guardamos nenhum dado seu.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>E se o QR Code expirar? <span>+</span></summary>
+            <p>Sem problema — basta gerar um novo código na janela de checkout. Você só paga quando quiser concluir.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="section cta-final">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div class="cta-rain" aria-hidden="true"></div>
+          <h2>Pronta para se perder <span class="grad-text">na chuva de Seul?</span> ☔</h2>
+          <p>Histórias completas por menos que um café. Pagamento único, acesso para sempre.</p>
+          <a href="#vitrine" class="btn btn-light btn-lg glow">📚 Escolher meu e-book</a>
+          <small>PIX · confirmação automática · leitura imediata</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo"><span class="logo-icon">📖</span><span class="logo-text">DORAMAS<em>BOOK</em></span></a>
+        <p>E-books de romance coreano para dorameiras de coração. Histórias originais, feitas com amor (e muita chuva).</p>
+        <div class="pay-badges"><span class="pay-badge">⚡ PIX</span><span class="pay-badge">🔒 NexusPag</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="#inicio">Início</a>
+        <a href="#vitrine">E-books</a>
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>E-books</h4>
+        <a href="#vitrine">O Guarda-Chuva Que Ela Esqueceu</a>
+        <a href="#vitrine">Em breve: vol. 2, 3 e 4</a>
+      </div>
+      <div class="footer-col">
+        <h4>Suporte</h4>
+        <a href="#faq">Dúvidas frequentes</a>
+        <a href="mailto:contato@doramasbook.com">contato@doramasbook.com</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 DORAMAS BOOK · Feito com 💜 e muito k-drama</span>
+      <span>Pagamento processado com segurança via NexusPag</span>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL DE CHECKOUT ============ -->
+  <div class="modal-overlay" id="checkoutModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Checkout">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+
+      <!-- PASSO 1: RESUMO -->
+      <div class="modal-step" id="stepResumo">
+        <div class="modal-head">
+          <h3>Finalizar pedido 🛒</h3>
+          <p>Você está a um PIX de distância da chuva de Seul…</p>
+        </div>
+        <div class="order-summary">
+          <img src="assets/capa-ebook.webp" alt="Capa do e-book" class="order-cover" loading="lazy" decoding="async" />
+          <div class="order-info">
+            <h4>O Guarda-Chuva Que Ela Esqueceu</h4>
+            <p class="order-sub">E-book · Romance · 69 páginas · PDF + leitura online</p>
+            <div class="order-prices">
+              <span class="price-old">R$ 12,90</span>
+              <span class="price-now">R$ 6,00</span>
+            </div>
+          </div>
+        </div>
+        <ul class="order-perks">
+          <li>⚡ Liberação automática após o PIX</li>
+          <li>📖 Leitura online + download do PDF</li>
+          <li>♾️ Acesso vitalício (recupere com seu e-mail)</li>
+        </ul>
+        <div class="input-group">
+          <label for="buyerEmail">Seu e-mail (serve para recuperar o acesso depois):</label>
+          <input type="email" id="buyerEmail" placeholder="voce@email.com" autocomplete="email" />
+        </div>
+        <button class="btn btn-primary btn-lg btn-block glow" id="btnGerarPix">
+          Gerar código PIX ⚡ R$ 6,00
+        </button>
+        <button class="recover-link" id="linkRecuperar">Já comprei? Recuperar acesso 🔑</button>
+        <p class="secure-note">🔒 Pagamento processado com segurança pela NexusPag</p>
+      </div>
+
+      <!-- PASSO 2: PIX -->
+      <div class="modal-step hidden" id="stepPix">
+        <div class="modal-head">
+          <h3>Pague com PIX 📲</h3>
+          <p>Escaneie o QR Code ou copie o código abaixo</p>
+        </div>
+        <div class="pix-body">
+          <div class="qr-wrap">
+            <img id="qrImage" alt="QR Code PIX" />
+            <div class="qr-ring"></div>
+          </div>
+          <div class="pix-side">
+            <div class="pix-timer">
+              ⏱️ Expira em <strong id="pixCountdown">30:00</strong>
+            </div>
+            <div class="pix-status" id="pixStatus">
+              <span class="pulse-dot"></span> Aguardando pagamento…
+            </div>
+            <label class="pix-label">PIX copia e cola:</label>
+            <div class="pix-copy">
+              <input type="text" id="pixCode" readonly />
+              <button class="btn btn-ghost btn-sm" id="btnCopyPix">Copiar</button>
+            </div>
+            <div class="pix-amount">Total: <strong>R$ 6,00</strong></div>
+          </div>
+        </div>
+        <p class="secure-note">Após pagar no app do seu banco, esta tela confirma sozinha ✨</p>
+      </div>
+
+      <!-- PASSO 3: SUCESSO -->
+      <div class="modal-step hidden" id="stepSucesso">
+        <div class="success-check">
+          <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M14 27l8 8 16-16"/></svg>
+        </div>
+        <div class="modal-head">
+          <h3>Pagamento confirmado! 🎉</h3>
+          <p>Boa leitura! Prepare o lencinho… 🤧💜</p>
+        </div>
+        <div class="success-actions">
+          <a class="btn btn-primary btn-lg btn-block glow" href="https://online.fliphtml5.com/marcous/yphc/#p=1" target="_blank" rel="noopener">
+            📖 Ler Agora
+          </a>
+          <a class="btn btn-light btn-lg btn-block" id="btnDownloadPdf" href="assets/o-guarda-chuva-que-ela-esqueceu.pdf" download="O-Guarda-Chuva-Que-Ela-Esqueceu.pdf">
+            ⬇️ Baixar PDF + Leitor Offline
+          </a>
+          <a class="download-fallback" id="linkLeitorOffline" href="assets/ler-agora.html" download="LER-AGORA-doramas-book.html">
+            📥 Baixar só o leitor offline (HTML)
+          </a>
+        </div>
+        <p class="secure-note">O leitor offline (HTML) abre direto no navegador, sem precisar voltar ao site ♾️</p>
+      </div>
+
+      <!-- PASSO RECUPERAR ACESSO -->
+      <div class="modal-step hidden" id="stepRecuperar">
+        <div class="modal-head">
+          <h3>Recuperar acesso 🔑</h3>
+          <p>Digite o e-mail que você usou na compra</p>
+        </div>
+        <div class="input-group">
+          <label for="recoverEmail">E-mail da compra:</label>
+          <input type="email" id="recoverEmail" placeholder="voce@email.com" autocomplete="email" />
+        </div>
+        <button class="btn btn-primary btn-lg btn-block glow" id="btnRecuperar">
+          Recuperar meu acesso ⚡
+        </button>
+        <p class="recover-msg hidden" id="recoverMsg"></p>
+        <button class="recover-link" id="linkVoltar">← Voltar para a compra</button>
+      </div>
+
+      <!-- PASSO ERRO / EXPIRADO -->
+      <div class="modal-step hidden" id="stepErro">
+        <div class="modal-head">
+          <h3 id="erroTitulo">Ops… ⏰</h3>
+          <p id="erroMsg">O código PIX expirou. Gere um novo para continuar.</p>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" id="btnTentarNovamente">🔄 Gerar novo PIX</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
